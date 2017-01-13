@@ -60,13 +60,13 @@ class ControlledServo
     ControlledServo(Servo &servo);
 
     // Prepares the ControlledServo for subsequent actions.
-    void begin(int16_t angle = 90);
+    void begin(uint8_t angle = 90);
     // Executes a move.
     void move(boolean blocking = false);
     void moveNow() { move(true); }
     // Sets the next angle to move to, then executes.
-    void moveTo(int16_t angle, boolean blocking = false);
-    void moveToNow(int16_t angle) { moveTo(angle, true); }
+    void moveTo(uint8_t angle, boolean blocking = false);
+    void moveToNow(uint8_t angle) { moveTo(angle, true); }
     // Checks if the servo is still moving.
     boolean moving();
     // Stops an asynchronous move().  Sets the targetAngle to the currentAngle.

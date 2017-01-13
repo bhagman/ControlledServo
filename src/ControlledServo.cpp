@@ -159,7 +159,7 @@ bool ControlledServo::update()
 
     if (_servo)
     {
-      int16_t outAngle = (int16_t)newAngle + _trim);
+      int16_t outAngle = (int16_t)(newAngle + _trim);
       _servo->write(constrain(outAngle, 0, 180));
     }
     _currentAngle = newAngle;
